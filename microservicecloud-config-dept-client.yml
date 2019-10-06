@@ -1,4 +1,4 @@
-spring:          
+ï»¿spring:          
   profiles:
     active:
       - dev
@@ -10,31 +10,31 @@ spring:
   application:
     name: microservicecloud-config-dept-client
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource        # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver          # mysqlÇı¶¯°ü
-    url: jdbc:mysql://192.168.33.11:3306/cloudDB01           # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource        # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver          # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://192.168.33.11:3306/cloudDB03           # æ•°æ®åº“åç§°
     username: root
     password: 123456
     dbcp2:
-      min-idle: 5                                       # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5                                   # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5                                      # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                              # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5                                       # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5                                   # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5                                      # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                              # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml    # mybatisÅäÖÃÎÄ¼şËùÔÚÂ·¾¶
-  type-aliases-package: com.felix.springcloud.entities  # ËùÓĞ Entity ±ğÃûÀàËùÔÚ°ü
+  config-location: classpath:mybatis/mybatis.cfg.xml    # mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨è·¯å¾„
+  type-aliases-package: com.felix.springcloud.entities  # æ‰€æœ‰ Entity åˆ«åç±»æ‰€åœ¨åŒ…
   mapper-locations:
-    - classpath:mybatis/mapper/**/*.xml                 # mapper Ó³ÉäÎÄ¼ş
+    - classpath:mybatis/mapper/**/*.xml                 # mapper æ˜ å°„æ–‡ä»¶
 
    
 eureka:
-  client:  #¿Í»§¶Ë×¢²á½ø eureka ·şÎñÁĞ±íÄÚ
+  client:  #å®¢æˆ·ç«¯æ³¨å†Œè¿› eureka æœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://eureka7001.com/eureka
   instance:
-    instance-id: dept-8001.com                #×Ô¶¨Òå·şÎñÃû³ÆĞÅÏ¢
-    prefer-ip-address: true                   #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾ IPµØÖ· 
+    instance-id: dept-8001.com                #è‡ªå®šä¹‰æœåŠ¡åç§°ä¿¡æ¯
+    prefer-ip-address: true                   #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤º IPåœ°å€ 
       
 info:
   app.name: felix-microservicecloud
@@ -50,30 +50,30 @@ spring:
   application:
     name: microservicecloud-config-dept-client
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource        # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver          # mysqlÇı¶¯°ü
-    url: jdbc:mysql://192.168.33.11:3306/cloudDB02           # Êı¾İ¿âÃû³Æ
+    type: com.alibaba.druid.pool.DruidDataSource        # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver          # mysqlé©±åŠ¨åŒ…
+    url: jdbc:mysql://192.168.33.11:3306/cloudDB02           # æ•°æ®åº“åç§°
     username: root
     password: 123456
     dbcp2:
-      min-idle: 5                                       # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5                                   # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5                                      # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                              # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä 
+      min-idle: 5                                       # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5                                   # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5                                      # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                              # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´ 
  
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml    # mybatisÅäÖÃÎÄ¼şËùÔÚÂ·¾¶
-  type-aliases-package: com.felix.springcloud.entities  # ËùÓĞ Entity ±ğÃûÀàËùÔÚ°ü
+  config-location: classpath:mybatis/mybatis.cfg.xml    # mybatisé…ç½®æ–‡ä»¶æ‰€åœ¨è·¯å¾„
+  type-aliases-package: com.felix.springcloud.entities  # æ‰€æœ‰ Entity åˆ«åç±»æ‰€åœ¨åŒ…
   mapper-locations:
-    - classpath:mybatis/mapper/**/*.xml                 # mapper Ó³ÉäÎÄ¼ş
+    - classpath:mybatis/mapper/**/*.xml                 # mapper æ˜ å°„æ–‡ä»¶
         
 eureka:
-  client:  #¿Í»§¶Ë×¢²á½ø eureka ·şÎñÁĞ±íÄÚ
+  client:  #å®¢æˆ·ç«¯æ³¨å†Œè¿› eureka æœåŠ¡åˆ—è¡¨å†…
     service-url:
       defaultZone: http://eureka7001.com/eureka
   instance:
-    instance-id: dept-8001.com                #×Ô¶¨Òå·şÎñÃû³ÆĞÅÏ¢
-    prefer-ip-address: true                   #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾ IPµØÖ· 
+    instance-id: dept-8001.com                #è‡ªå®šä¹‰æœåŠ¡åç§°ä¿¡æ¯
+    prefer-ip-address: true                   #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤º IPåœ°å€ 
 
 info:
   app.name: felix-microservicecloud
